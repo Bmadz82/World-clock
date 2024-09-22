@@ -21,29 +21,30 @@
         <option value="Pacific/Auckland">Auckland</option>
       </select>
 
-      <div id="cities">
-        <div class="city" id="los-angeles">
-          <div>
-            <h2>Los Angeles</h2>
-            <div class="date"></div>
-          </div>
-          <div class="time"></div>
-        </div>
-        <div class="city" id="paris">
-          <div>
-            <h2>Paris</h2>
-            <div class="date"></div>
-          </div>
-          <div class="time"></div>
-        </div>
+      <div id="los-angeles">
+        <div class="date"></div>
+        <div class="time"></div>
       </div>
-    </div>
+      <div id="paris">
+        <div class="date"></div>
+        <div class="time"></div>
+      </div>
+      <select id="city">
+        <option value="current">Current Location</option>
+        <option value="Europe/Paris">Paris</option>
+        <option value="America/Los_Angeles">Los Angeles</option>
+      </select>
+      <div id="cities"></div>
     <footer>
       This project was coded with ❤️ by <strong>Bella M</strong> and is
       <a href="https://github.com/Bmadz82/World-clock" target="_blank">
         open sourced on GitHub</a
       >
     </footer>
-    <script src="javascript/index.js"></script>
+    <script src="javascript/index.js">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+
+    </script>
   </body>
 </html>
