@@ -1,22 +1,22 @@
-ddocument.getElementById('city').addEventListener('change', function() {
+document.getElementById('city').addEventListener('change', function() {
   const city = this.value;
 
   // Define timezones
   const timezones = {
-      current: moment.tz.guess(),
       'Africa/Pretoria': 'Africa/Johannesburg',
       'Africa/Harare': 'Africa/Harare',
       'Europe/Paris': 'Europe/Paris'
   };
 
-  const timezone = timezones[city] || timezones.current;
+  // Get the timezone based on the selected city
+  const timezone = timezones[city];
 
-  const now = moment.tz(timezone);
-
-  // Update the display for selected city
-  if (city) {
-      document.querySelector(`#${city.split('/')[1] || 'current'} .date`).innerText = now.format('MMMM Do YYYY');
-      document.querySelector(`#${city.split('/')[1] || 'current'} .time`).innerText = now.format('hh:mm:ss A');
+  if (timezone) {
+      const now = moment.tz(timezone);
+      
+      // Update the date and time for the selected city
+      document.querySelector(`#${city.split('/')[1]}.date`).innerText = now.format('MMMM Do YYYY');
+      document.querySelector(`#${city.split('/')[1]}.time`).innerText = now.format('hh:mm:ss A');
   } else {
       // Clear the date and time if no city is selected
       document.querySelectorAll('.date, .time').forEach(element => {
