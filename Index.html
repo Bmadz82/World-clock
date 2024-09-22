@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
-    <title>World Clock - Bella</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>World Clock</h1>
-
-      <select id="city">
-        <option value="">Select a city..</option>
-        <option value="current">My current location</option>
-        <option value="Europe/London">London</option>
-        <option value="America/New_York">New York</option>
-        <option value="Pacific/Auckland">Auckland</option>
-      </select>
-
-      <div id="los-angeles">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>World Clock</h1>
+    <div id="los-angeles">
+        <h2>Los Angeles</h2>
         <div class="date"></div>
         <div class="time"></div>
-      </div>
-      <div id="paris">
+    </div>
+
+    <div id="paris">
+        <h2>Paris</h2>
         <div class="date"></div>
         <div class="time"></div>
-      </div>
-      <select id="city">
+    </div>
+
+    <div id="tokyo">
+        <h2>Tokyo</h2>
+        <div class="date"></div>
+        <div class="time"></div>
+    </div>
+
+    <select id="city">
         <option value="current">Current Location</option>
-        <option value="Europe/Paris">Paris</option>
         <option value="America/Los_Angeles">Los Angeles</option>
-      </select>
-      <div id="cities"></div>
-    <footer>
-      This project was coded with ❤️ by <strong>Bella M</strong> and is
-      <a href="https://github.com/Bmadz82/World-clock" target="_blank">
-        open sourced on GitHub</a
-      >
-    </footer>
-    <script src="javascript/index.js">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+        <option value="Europe/Paris">Paris</option>
+        <option value="Asia/Tokyo">Tokyo</option>
+    </select>
 
-    </script>
-  </body>
+    <div id="cities"></div>
+    <a href="/">All cities</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
